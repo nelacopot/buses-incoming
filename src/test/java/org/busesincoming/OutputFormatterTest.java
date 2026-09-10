@@ -14,6 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class OutputFormatterTest {
     @Test
     void outputTest() {
+        PrintStream originalOut = System.out;
+
         TimeFormatter tf = new TimeFormatter();
         OutputFormatter of = new OutputFormatter(tf);
         Route route = new Route("102", "102");
@@ -29,6 +31,8 @@ public class OutputFormatterTest {
         output.reset();
         of.print(example, LocalTime.of(22, 0), "relative");
         assertEquals("Route 102" + System.lineSeparator() + "10 min" + System.lineSeparator(), output.toString());
+
+        System.setOut(originalOut);
 
     }
 }

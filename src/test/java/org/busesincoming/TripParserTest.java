@@ -16,7 +16,7 @@ class TripParserTest {
         Path f = Path.of("src/test/resources/gtfs/test_trips.txt");
 
         Map<String, Trip> trips = parser.makeMapOfTrips(f);
-        assertEquals(5, trips.size());
+        assertEquals(9, trips.size());
 
         Trip trip = trips.get("NORMAL_03_103_Return_17:00");
         assertEquals("NORMAL_03_103_Return_17:00", trip.getId());

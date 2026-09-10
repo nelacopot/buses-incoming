@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="buses-incoming:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/buses_incoming_jar</output-path>
+    <root id="archive" name="buses-incoming.jar">
+      <element id="module-output" name="buses-incoming" />
+    </root>
+  </artifact>
+</component>
