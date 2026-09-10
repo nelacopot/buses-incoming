@@ -26,7 +26,15 @@ public class StopTimeParser {
                 if (foundStopID == stopID){
                     LocalTime arrival = LocalTime.parse(parts[1]); //time parse samo za tiste, ki imajo iskan stopID
 
-                    if (!arrival.isBefore(start) && !arrival.isAfter(end)){ //od start do end
+                    boolean withinTimeRange;
+
+                    //handling če gre ura čez polnoč
+                    if (end.isAfter(start) || end.equals(start)) {
+                        withinTimeRange = !arrival.isBefore(start) && !arrival.isAfter(end);
+                    } else {
+                        withinTimeRange = !arrival.isBefore(start) || !arrival.isAfter(end);
+                    }
+                    if (withinTimeRange) {
                         arrivals.add(new Arrival(tripID, arrival));
                     }
                 }
