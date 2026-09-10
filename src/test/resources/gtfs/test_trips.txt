@@ -1,0 +1,6 @@
+route_id,service_id,trip_id
+101,1,NORMAL_03_101_Return_22:10
+103,1,NORMAL_03_103_Return_17:00
+101,1,NORMAL_03_101_Return_17:45
+106,1,NORMAL_03_106_Go_15:40
+101,1,NORMAL_03_101_Return_16:50

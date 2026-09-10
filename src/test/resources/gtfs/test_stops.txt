@@ -1,0 +1,4 @@
+stop_id,stop_code,stop_name
+2,2001,Trg zmage
+10,2003,Zoo
+15,2000,Glavna avtobusna postaja
